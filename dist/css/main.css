@@ -1,0 +1,7 @@
+body {
+  background-color: #fff;
+  color: red;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
