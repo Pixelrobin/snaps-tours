@@ -9,6 +9,7 @@ const webpack      = require('webpack-stream');
 const named        = require('vinyl-named');
 const uglify       = require('gulp-uglify');
 const rename       = require('gulp-rename');
+const bs           = require('browser-sync');
 
 gulp.task('pages', done =>
 	gulp.src('src/models/**/*.json')
@@ -45,6 +46,7 @@ gulp.task('styles', done =>
 		}))
 		
 		.pipe(gulp.dest('dist/css'))
+		.pipe(bs.stream())
 );
 
 gulp.task('scripts', done =>
@@ -69,7 +71,14 @@ gulp.task('scripts', done =>
 );
 
 gulp.task('dev', gulp.parallel('pages', () => {
-	gulp.watch(['src/models/**/*.json', 'src/views/**/*.njk'], gulp.parallel('pages'));
+	gulp.watch(['src/models/**/*.json', 'src/views/**/*.njk'], gulp.parallel('pages'))
+		.on('change', bs.reload);
 	gulp.watch(['src/styles/**/*.scss', 'src/styles/**/*.css'], gulp.parallel('styles'));
 	gulp.watch('src/scripts/**/*.js', gulp.parallel('scripts'));
+
+	bs.init({
+		server: {
+			baseDir: './dist'
+		}
+	});
 }));
