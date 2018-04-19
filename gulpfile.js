@@ -8,6 +8,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const webpack      = require('webpack-stream');
 const named        = require('vinyl-named');
 const uglify       = require('gulp-uglify');
+const rename       = require('gulp-rename');
 
 gulp.task('pages', done =>
 	gulp.src('src/models/**/*.json')
@@ -22,6 +23,7 @@ gulp.task('pages', done =>
 					done => {
 						gulp.src(`src/views/**/${template}.njk`)
 							.pipe(nunjucks.compile(data))
+							.pipe(rename({ extname: '.html' }))
 							.pipe(gulp.dest('dist'))
 						
 						done();
@@ -38,8 +40,8 @@ gulp.task('styles', done =>
 		}).on('error', sass.logError))
 
 		.pipe(autoprefixer({
-        	browsers: ['last 4 versions'],
-            cascade: false
+			browsers: ['last 4 versions'],
+			cascade: false
 		}))
 		
 		.pipe(gulp.dest('dist/css'))
