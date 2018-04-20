@@ -4,6 +4,10 @@ $font-helvetica: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $color-black: #212521;
 $color-lightblack: #555b61;
 
+@import 'node_modules/reset-css/_reset.scss';
+
+/* --- END RESET --- */
+
 * { box-sizing: border-box; }
 
 html {
@@ -25,6 +29,7 @@ p {
 }
 
 h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
+	display: block;
 	font-family: $font-roboto;
 	text-transform: uppercase;
 	letter-spacing: 0.1rem;
@@ -150,8 +155,16 @@ label {
 	}
 }
 
+ul {
+	list-style-type: disc;
+	margin-left: 1.5rem;
+	font-size: 1rem;
+	line-height: 150%;
+}
+
 #wrapper {
 	min-width: 760px;
+	position: relative;
 }
 
 .page {
@@ -202,7 +215,7 @@ header {
 li.glide__slide {
 	position: relative;
 	border-radius: 0.5rem;
-	transition: transform 0.5s;
+	transition: transform 0.5s, box-shadow 0.5s;
 	transform: scale(0.95);
 	height: 400px;
 	background-position: center;
@@ -291,7 +304,9 @@ li.glide__slide {
 
 #main-nav {
 	display: inline-block;
-	width: 960px;
+	width: 100%;
+	max-width: 960px;
+	min-width: 750px;
 }
 
 #main-nav ul {
@@ -329,5 +344,76 @@ li.glide__slide {
 	& a {
 		text-decoration: none;
 		color: $color-black;
+	}
+}
+
+.home-card {
+	padding: 5rem 3rem;
+	border-radius: 0.5rem;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	position: relative;
+	width: 40rem;
+}
+
+.clip-bottom {
+	margin-bottom: -2rem;
+}
+
+.big-text {
+	font-size: 3rem;
+	line-height: 2.5rem;
+	margin-bottom: 1rem;
+}
+
+.text-centered {
+	text-align: center!important;
+}
+
+.block-centered {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.block-left {
+	display: block;
+	margin-left: 0;
+	margin-right: auto;
+}
+
+.block-right {
+	display: block;
+	margin-left: auto;
+	margin-right: 0;
+}
+
+.rounded {
+	border-radius: 0.5rem;
+}
+
+.inverted {
+	background-color: $color-black;
+	color: white;
+}
+
+/* THE REST OF THESE ARE AUTO GENERATED HELPER CLASSES USING SASS SCRIPTS */
+/* (Normally I would compress this file to get rid of whitespace) */
+$mp-props: m p;
+$mp-sides: t b l r;
+
+$mp-props-f: margin padding;
+$mp-sides-f: top bottom left right;
+
+@for $p from 1 through 2 {
+	@for $m from 0 through 6 {
+		@for $s from 1 through 4 {
+			.#{nth($mp-props, $p)}#{nth($mp-sides, $s)}-#{$m} {
+				#{nth($mp-props-f, $p)}-#{nth($mp-sides-f, $s)}: $m * 1rem !important;
+			}
+		}
+
+		.#{nth($mp-props, $p)}-#{$m} {
+			#{nth($mp-props-f, $p)}: $m * 0.5rem !important;
+		}
 	}
 }

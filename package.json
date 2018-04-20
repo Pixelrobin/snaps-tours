@@ -25,6 +25,7 @@
     "webpack-stream": "^4.0.3"
   },
   "dependencies": {
-    "@glidejs/glide": "^3.0.1"
+    "@glidejs/glide": "^3.0.1",
+    "reset-css": "^3.0.0"
   }
 }

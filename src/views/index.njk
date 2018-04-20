@@ -17,7 +17,7 @@
 			</nav>
 		</div>
 
-		<div style="width: 100%;">
+		<div style="width: 100%; z-index: 1;">
 			<div id="glide" class="glide">
 				<div class="glide__track" data-glide-el="track">
 					<ul class="glide__slides">
@@ -54,39 +54,34 @@
 	</header>
 
 	<div class="page">	
+		<h1 class="text-centered big-text mb-3">The Ultimate Escape.</h1>
+		
+		<p class="block-centered mb-3">{{ paragraph1 }}</p>
 
-		<div>
-			<h1>Heading One</h1>
-			<h2>Heading Two</h2>
-			<h3>Heading Three</h3>
-			<h4>Heading Four</h4>
+		<img class="block-left rounded clip-bottom" src="https://source.unsplash.com/800x400/?travel&aa"></img>
+		
+		<div class="block-right home-card inverted clip-bottom">
+			<h1>Putting YOU First.</h1>
+			<p>{{ paragraph2 }}</p>
+		</div>
+		
+		<img class="block-centered rounded clip-bottom" src="https://source.unsplash.com/800x400/?travel&ab"></img>
 
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet consequat arcu. Donec at augue metus. Aenean porttitor justo a commodo laoreet. Morbi a egestas tortor, vitae tempor mi. Curabitur quis magna sit amet augue vulputate gravida. Nullam ut vulputate purus, eu posuere leo. Sed tincidunt finibus tellus. Ut dapibus nec tortor in porta. Nulla fermentum, nisl at iaculis tempus, neque turpis auctor est, et consectetur ligula sem sit amet lorem. Morbi magna nisi, accumsan et nibh non, porttitor aliquet libero. Sed euismod finibus lobortis. Sed sit amet mattis ex.</p>
+		<div class="block-left home-card inverted mb-6">
+			<h1>Everything You Expect.</h1>
+				<ul>
+					<li>Round-trip transportation from USA departure city</li>
+					<li>Accommodations in three-and four-star hotels</li>
+					<li>Continental breakfast and dinner daily</li>
+					<li>All transfers and intercity transportation</li>
+					<li>Guided city sightseeing tours</li>
+					<li>Full-time services of multilingual WCT Tour Director</li>
+				</ul>
+		</div>
 
-			<button>Button</button>
-			<a href="#" class="button">Anchor button</a>
-			<button class="button--ghost">Ghost button</button>
-
-			<form action="#">
-				<input type="text" value="text box">
-				<input type="button" value="Button">
-				<br>
-				<label for="abc">Label:</label>
-				<input type="text" name="abc" value="text box">
-				<br>
-				<label for="def" class="label--top">Label top:</label>
-				<input type="text" name="def" value="text box">
-				<br>
-				<select>
-					<option>Option 1</option>
-					<option>Option 2</option>
-					<option>Option 3</option>
-				</select>
-				<br>
-				<textarea></textarea>
-				<br>
-				<input type="submit" value="Submit button">
-			</form>
+		<div class="text-centered mb-6">
+			<span class="h1 big-text">Prices starting at $1000</span>
+			<a href="#" class="button">See our Tours</a>
 		</div>
 	</div>
 {% endblock %}
