@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>{{ title }}</title>
+		<link rel="stylesheet" href="./css/main.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
+
+		{% block head %}{% endblock %}
+	</head>
+
+	<body>
+		<div id="wrapper">
+			{% block body %}{% endblock %}
+		</div>
+	</body>
+</html>

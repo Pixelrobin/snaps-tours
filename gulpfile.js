@@ -73,8 +73,11 @@ gulp.task('scripts', done =>
 gulp.task('dev', gulp.parallel('pages', () => {
 	gulp.watch(['src/models/**/*.json', 'src/views/**/*.njk'], gulp.parallel('pages'))
 		.on('change', bs.reload);
+	
 	gulp.watch(['src/styles/**/*.scss', 'src/styles/**/*.css'], gulp.parallel('styles'));
-	gulp.watch('src/scripts/**/*.js', gulp.parallel('scripts'));
+	
+	gulp.watch('src/scripts/**/*.js', gulp.parallel('scripts'))
+		.on('change', bs.reload);
 
 	bs.init({
 		server: {

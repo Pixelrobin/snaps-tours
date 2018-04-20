@@ -1,42 +1,92 @@
-<DOCTYPE html>
+{% extends "./deps/template.njk" %}
 
-<html>
-	<head>
-		<title>{{ title }}</title>
-		<link rel="stylesheet" href="./css/main.css">
-		<link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
-	</head>
+{% block head %}
+<script type="text/javascript" src="./scripts/index.js">
+{% endblock %}
 
-	<body style="padding: 2rem;">
-		<h1>Heading One</h1>
-		<h2>Heading Two</h2>
-		<h3>Heading Three</h3>
+{% block body %}
+	<header>
+		<div id="nav-container">
+			<nav id="main-nav">
+				<div class="logo-circle"></div>
+				<ul>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Tours</a></li>
+					<li><a href="#">Pricing</a></li>
+				</ul>
+			</nav>
+		</div>
 
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet consequat arcu. Donec at augue metus. Aenean porttitor justo a commodo laoreet. Morbi a egestas tortor, vitae tempor mi. Curabitur quis magna sit amet augue vulputate gravida. Nullam ut vulputate purus, eu posuere leo. Sed tincidunt finibus tellus. Ut dapibus nec tortor in porta. Nulla fermentum, nisl at iaculis tempus, neque turpis auctor est, et consectetur ligula sem sit amet lorem. Morbi magna nisi, accumsan et nibh non, porttitor aliquet libero. Sed euismod finibus lobortis. Sed sit amet mattis ex.</p>
+		<div style="width: 100%;">
+			<div id="glide" class="glide">
+				<div class="glide__track" data-glide-el="track">
+					<ul class="glide__slides">
+						<li class="glide__slide" style="background-image: url(https://source.unsplash.com/600x400/?paris&a);">
+							<div class="glide__slide__content">
+								<h1>Grand Europe Tour</h1>
+								<a href="#">Learn more</a>
+							</div>
+						</li>
+						<li class="glide__slide" style="background-image: url(https://source.unsplash.com/600x400/?paris&b);">
+							<div class="glide__slide__content">
+								<h1>Some Other Tour</h1>
+							</div>
+						</li>
+						<li class="glide__slide" style="background-image: url(https://source.unsplash.com/600x400/?paris&c);">
+							<div class="glide__slide__content">
+								<h1>Yet Another Tour</h1>
+							</div>
+						</li>
+						<li class="glide__slide" style="background-image: url(https://source.unsplash.com/600x400/?paris&d);">
+							<div class="glide__slide__content">
+								<h1>Oh look! A tour!</h1>
+							</div>
+						</li>
+						<li class="glide__slide" style="background-image: url(https://source.unsplash.com/600x400/?paris&e);">
+							<div class="glide__slide__content">
+								<h1>This is a tour</h1>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
 
-		<button>Button</button>
-		<a href="#" class="button">Anchor button</a>
-		<button class="button--ghost">Ghost button</button>
+	<div class="page">	
 
-		<form action="#">
-			<input type="text" value="text box">
-			<input type="button" value="Button">
-			<br>
-			<label for="abc">Label:</label>
-			<input type="text" name="abc" value="text box">
-			<br>
-			<label for="def" class="label--top">Label top:</label>
-			<input type="text" name="def" value="text box">
-			<br>
-			<select>
-				<option>Option 1</option>
-				<option>Option 2</option>
-				<option>Option 3</option>
-			</select>
-			<br>
-			<textarea></textarea>
-			<br>
-			<input type="submit" value="Submit button">
-		</form>
-	</body>
-</html>
+		<div>
+			<h1>Heading One</h1>
+			<h2>Heading Two</h2>
+			<h3>Heading Three</h3>
+			<h4>Heading Four</h4>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet consequat arcu. Donec at augue metus. Aenean porttitor justo a commodo laoreet. Morbi a egestas tortor, vitae tempor mi. Curabitur quis magna sit amet augue vulputate gravida. Nullam ut vulputate purus, eu posuere leo. Sed tincidunt finibus tellus. Ut dapibus nec tortor in porta. Nulla fermentum, nisl at iaculis tempus, neque turpis auctor est, et consectetur ligula sem sit amet lorem. Morbi magna nisi, accumsan et nibh non, porttitor aliquet libero. Sed euismod finibus lobortis. Sed sit amet mattis ex.</p>
+
+			<button>Button</button>
+			<a href="#" class="button">Anchor button</a>
+			<button class="button--ghost">Ghost button</button>
+
+			<form action="#">
+				<input type="text" value="text box">
+				<input type="button" value="Button">
+				<br>
+				<label for="abc">Label:</label>
+				<input type="text" name="abc" value="text box">
+				<br>
+				<label for="def" class="label--top">Label top:</label>
+				<input type="text" name="def" value="text box">
+				<br>
+				<select>
+					<option>Option 1</option>
+					<option>Option 2</option>
+					<option>Option 3</option>
+				</select>
+				<br>
+				<textarea></textarea>
+				<br>
+				<input type="submit" value="Submit button">
+			</form>
+		</div>
+	</div>
+{% endblock %}

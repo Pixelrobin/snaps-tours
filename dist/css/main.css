@@ -21,7 +21,7 @@ p {
   margin-bottom: 0.5rem;
 }
 
-h1, h2, h3, .h1, .h2, .h3 {
+h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
@@ -30,17 +30,23 @@ h1, h2, h3, .h1, .h2, .h3 {
 }
 
 h1, .h1 {
+  font-size: 2.5rem;
+  line-height: 2rem;
+  margin-bottom: 1rem;
+}
+
+h2, .h2 {
   font-size: 2rem;
   line-height: 1.5rem;
   margin-bottom: 1.15rem;
 }
 
-h2, .h2 {
+h3, .h3 {
   font-size: 1.5rem;
   line-height: 1.25rem;
 }
 
-h3, .h3 {
+h4, .h4 {
   font-size: 1.25rem;
   line-height: 1rem;
 }
@@ -147,4 +153,323 @@ label.label--top {
   display: block;
   margin-right: 0;
   margin-bottom: 0.25rem;
+}
+
+#wrapper {
+  min-width: 760px;
+}
+
+.page {
+  min-width: 760px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+header {
+  position: relative;
+  padding-bottom: 8rem;
+}
+
+#tours-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Glidejs css --- */
+.glide {
+  position: relative;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.glide * {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+.glide__track {
+  overflow: hidden;
+}
+
+.glide__slides {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -ms-touch-action: pan-Y;
+  touch-action: pan-Y;
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  will-change: transform;
+}
+
+.glide__slides--dragging {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.glide__slide {
+  width: 100%;
+  height: 100%;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  white-space: initial;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.glide__slide a {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.glide__arrows {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.glide__bullets {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.glide--rtl {
+  direction: rtl;
+}
+
+/* --- Glidejs theme --- */
+.glide {
+  position: relative;
+}
+
+.glide::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.75)), color-stop(15%, transparent), color-stop(85%, transparent), to(rgba(255, 255, 255, 0.75)));
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.75), transparent 15%, transparent 85%, rgba(255, 255, 255, 0.75) 100%);
+  background: -o-linear-gradient(left, rgba(255, 255, 255, 0.75), transparent 15%, transparent 85%, rgba(255, 255, 255, 0.75) 100%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.75), transparent 15%, transparent 85%, rgba(255, 255, 255, 0.75) 100%);
+  pointer-events: none;
+}
+
+.glide__slides {
+  padding: 1rem 0;
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+li.glide__slide {
+  position: relative;
+  border-radius: 0.5rem;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  -o-transition: transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+  cursor: pointer;
+}
+
+li.glide__slide .glide__slide__content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-bottom: 3.5rem;
+  padding-right: 2rem;
+  z-index: 3;
+}
+
+li.glide__slide h1, li.glide__slide a {
+  display: block;
+  width: 100%;
+  opacity: 0;
+  -webkit-transform: translateY(1rem);
+  -ms-transform: translateY(1rem);
+  transform: translateY(1rem);
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, -webkit-transform 0.5s;
+  -o-transition: opacity 0.5s, transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s, -webkit-transform 0.5s;
+  color: white;
+  text-align: right;
+  margin-bottom: 0.5rem;
+}
+
+li.glide__slide a {
+  -webkit-transition: opacity 0.5s 0.1s, -webkit-transform 0.5s 0.1s;
+  transition: opacity 0.5s 0.1s, -webkit-transform 0.5s 0.1s;
+  -o-transition: opacity 0.5s 0.1s, transform 0.5s 0.1s;
+  transition: opacity 0.5s 0.1s, transform 0.5s 0.1s;
+  transition: opacity 0.5s 0.1s, transform 0.5s 0.1s, -webkit-transform 0.5s 0.1s;
+}
+
+li.glide__slide.glide__slide--active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+li.glide__slide.glide__slide--active h1, li.glide__slide.glide__slide--active a {
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+li.glide__slide.glide__slide--active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(33, 37, 33, 0.5)), to(transparent));
+  background: -webkit-linear-gradient(bottom, rgba(33, 37, 33, 0.5), transparent);
+  background: -o-linear-gradient(bottom, rgba(33, 37, 33, 0.5), transparent);
+  background: linear-gradient(to top, rgba(33, 37, 33, 0.5), transparent);
+  -webkit-animation-name: fade-in;
+  animation-name: fade-in;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  border-bottom-right-radius: inherit;
+  border-bottom-left-radius: inherit;
+}
+
+li.glide__slide.glide__slide--active:hover {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.logo-circle {
+  float: left;
+  width: 10rem;
+  height: 10rem;
+  min-width: 12rem;
+  min-height: 12rem;
+  background-color: white;
+  border-radius: 50%;
+  margin-top: -6rem;
+  margin-right: 1rem;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#nav-container {
+  margin: 0 auto;
+  height: 8rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  z-index: 3;
+  text-align: center;
+}
+
+#main-nav {
+  display: inline-block;
+  width: 960px;
+}
+
+#main-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+
+#main-nav ul li {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-right: 2rem;
+  display: block;
+  float: left;
+  position: relative;
+}
+
+#main-nav ul li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.2rem;
+  background: #212521;
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: -webkit-transform 0.25s;
+  -o-transition: transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s;
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  transform: scaleX(0);
+}
+
+#main-nav ul li:hover::after {
+  -webkit-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+#main-nav ul a {
+  text-decoration: none;
+  color: #212521;
 }
