@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>{{ title }}</title>
+		<link rel="stylesheet" href="{{ root }}/css/main.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
+
+		{% block head %}{% endblock %}
+	</head>
+
+	<body>
+		<div id="wrapper">
+			{% block header %}
+				<div id="nav-container">
+					<nav id="main-nav">
+						<ul>
+							<li><a href="#">About</a></li>
+							<li><a href="#">Tours</a></li>
+							<li><a href="#">Pricing</a></li>
+						</ul>
+					</nav>
+				</div>
+			{% endblock %}
+			{% block body %}{% endblock %}
+		</div>
+	</body>
+</html>

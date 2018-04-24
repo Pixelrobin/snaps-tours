@@ -291,7 +291,24 @@ li.glide__slide {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+#main-nav {
+	display: inline-block;
+	width: 100%;
+	max-width: 960px;
+	min-width: 750px;
+	text-align: left;
+}
+
 #nav-container {
+	width: 100%;
+	text-align: center;
+	
+	& #main-nav {
+		text-align: center;
+	}
+}
+
+#home-nav-container {
 	margin: 0 auto;
 	height: 8rem;
 	position: absolute;
@@ -302,18 +319,11 @@ li.glide__slide {
 	text-align: center;
 }
 
-#main-nav {
-	display: inline-block;
-	width: 100%;
-	max-width: 960px;
-	min-width: 750px;
-}
-
 #main-nav ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
-	float: left;
+	display: inline-block;
 
 	& li {
 		font-family: $font-roboto;
@@ -323,6 +333,7 @@ li.glide__slide {
 		display: block;
 		float: left;
 		position: relative;
+		padding: 1rem 0;
 
 		&::after {
 			content: "";
@@ -404,16 +415,29 @@ $mp-sides: t b l r;
 $mp-props-f: margin padding;
 $mp-sides-f: top bottom left right;
 
+// https://css-tricks.com/snippets/sass/power-function/
+@function pow($number, $exponent) {
+	$value: 1;
+  
+	@if $exponent > 0 {
+	  @for $i from 1 through $exponent {
+		$value: $value * $number;
+	  }
+	}
+  
+	@return $value;
+  }
+
 @for $p from 1 through 2 {
 	@for $m from 0 through 6 {
 		@for $s from 1 through 4 {
 			.#{nth($mp-props, $p)}#{nth($mp-sides, $s)}-#{$m} {
-				#{nth($mp-props-f, $p)}-#{nth($mp-sides-f, $s)}: $m * 1rem !important;
+				#{nth($mp-props-f, $p)}-#{nth($mp-sides-f, $s)}: pow($m, 2) * 1rem !important;
 			}
 		}
 
 		.#{nth($mp-props, $p)}-#{$m} {
-			#{nth($mp-props-f, $p)}: $m * 0.5rem !important;
+			#{nth($mp-props-f, $p)}: pow($m, 2) * 1rem!important;
 		}
 	}
 }
