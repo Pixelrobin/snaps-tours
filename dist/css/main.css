@@ -467,7 +467,7 @@ li.glide__slide.glide__slide--active:hover {
   transform: scale(1);
 }
 
-.logo-circle {
+.home-logo-circle {
   float: left;
   width: 10rem;
   height: 10rem;
@@ -481,21 +481,29 @@ li.glide__slide.glide__slide--active:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.logo {
+  height: 6rem;
+  width: auto;
+  display: inline-block;
+  margin-right: 1rem;
+}
+
 #main-nav {
   display: inline-block;
-  width: 100%;
-  max-width: 960px;
-  min-width: 750px;
   text-align: left;
+  vertical-align: top;
 }
 
 #nav-container {
   width: 100%;
   text-align: center;
+  padding-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 #nav-container #main-nav {
   text-align: center;
+  padding: 1.5rem 0;
 }
 
 #home-nav-container {

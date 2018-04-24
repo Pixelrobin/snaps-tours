@@ -2505,6 +2505,14 @@ gulp-fn@^0.0.2:
     plugin-error "^1.0.1"
     through2 "^0.4.2"
 
+gulp-newer@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/gulp-newer/-/gulp-newer-1.4.0.tgz#25243ed6eac8f5462b95894e0d41937b112e65f3"
+  dependencies:
+    glob "^7.0.3"
+    kew "^0.7.0"
+    plugin-error "^0.1.2"
+
 gulp-nunjucks@^3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/gulp-nunjucks/-/gulp-nunjucks-3.1.1.tgz#6533a8a28dd547ab223f7ce6816f399b97192c0c"
@@ -3196,6 +3204,10 @@ jsprim@^1.2.2:
 just-debounce@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/just-debounce/-/just-debounce-1.0.0.tgz#87fccfaeffc0b68cd19d55f6722943f929ea35ea"
+
+kew@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/kew/-/kew-0.7.0.tgz#79d93d2d33363d6fdd2970b335d9141ad591d79b"
 
 kind-of@^1.1.0:
   version "1.1.0"

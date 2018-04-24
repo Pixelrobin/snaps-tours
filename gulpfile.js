@@ -10,6 +10,7 @@ const uglify       = require('gulp-uglify');
 const rename       = require('gulp-rename');
 const bs           = require('browser-sync');
 const data         = require('gulp-data');
+const newer        = require('gulp-newer');
 
 gulp.task('pages', done =>
 	gulp.src(["src/views/**/*.njk", "!src/views/**/_*.njk"])
@@ -69,15 +70,23 @@ gulp.task('scripts', done =>
 		.pipe(gulp.dest('dist/scripts'))
 );
 
+gulp.task('media', done =>
+	gulp.src('src/media/**')
+		.pipe(newer('dist/media'))
+		.pipe(gulp.dest('dist/media'))
+		.pipe(bs.stream())
+);
+
 gulp.task('dev', gulp.series('pages', 'styles', 'scripts', () => {
 	gulp.watch(['src/models/**/*.json', 'src/views/**/*.njk'], gulp.parallel('pages'))
 		.on('change', bs.reload);
 	
-	gulp.watch(['src/styles/**/*.scss', 'src/styles/**/*.css'], gulp.parallel('styles'));
-	
 	gulp.watch('src/scripts/**/*.js', gulp.parallel('scripts'))
 		.on('change', bs.reload);
 
+	gulp.watch('src/media/**', gulp.parallel('media'));
+	gulp.watch(['src/styles/**/*.scss', 'src/styles/**/*.css'], gulp.parallel('styles'));
+	
 	bs.init({
 		server: {
 			baseDir: './dist'
