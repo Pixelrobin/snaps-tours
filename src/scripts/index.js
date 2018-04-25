@@ -1,6 +1,6 @@
 import Glide from '@glidejs/glide';
 
-window.addEventListener('load', () => {
+window.addEventListener('DOMContentLoaded', () => {
 	const glideElement = document.getElementById('glide');
 
 	const glide = new Glide('.glide', {

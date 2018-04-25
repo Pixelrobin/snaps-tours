@@ -18,36 +18,29 @@
 			</nav>
 		</div>
 
-		<div style="width: 100%; z-index: 1;">
+		<div style="width: 100%;">
 			<div id="glide" class="glide">
 				<div class="glide__track" data-glide-el="track">
 					<ul class="glide__slides">
-						<li class="glide__slide" style="background-image: url(https://source.unsplash.com/600x400/?paris&a);">
-							<div class="glide__slide__content">
-								<h1>Grand Europe Tour</h1>
-								<a href="#">Learn more</a>
-							</div>
-						</li>
-						<li class="glide__slide" style="background-image: url(https://source.unsplash.com/600x400/?paris&b);">
-							<div class="glide__slide__content">
-								<h1>Some Other Tour</h1>
-							</div>
-						</li>
-						<li class="glide__slide" style="background-image: url(https://source.unsplash.com/600x400/?paris&c);">
-							<div class="glide__slide__content">
-								<h1>Yet Another Tour</h1>
-							</div>
-						</li>
-						<li class="glide__slide" style="background-image: url(https://source.unsplash.com/600x400/?paris&d);">
-							<div class="glide__slide__content">
-								<h1>Oh look! A tour!</h1>
-							</div>
-						</li>
-						<li class="glide__slide" style="background-image: url(https://source.unsplash.com/600x400/?paris&e);">
-							<div class="glide__slide__content">
-								<h1>This is a tour</h1>
-							</div>
-						</li>
+						{% for id, tour in tours %}
+							<li class="glide__slide" style="background-image: url({{ root }}/{{ tour.image }}-small.jpg);">
+								<a href="{{ root }}/pages/tours/{{ tour.id }}.html">
+									<div class="glide__slide__mouse-catcher">
+										<div class="glide__slide__content">
+											<h1>{{ tour.name }}</h1>
+											<p>Learn more</p>
+										</div>
+									</div>
+								</a>
+							</li>
+						{% else %}
+							<li class="glide__slide" style="background: red; color: white;">
+								<div class="glide__slide__content">
+									<h1>NO TOURS FOUND</h1>
+									<a href="#">Panic!!</a>
+								</div>
+							</li>
+						{% endfor %}
 					</ul>
 				</div>
 			</div>
@@ -70,7 +63,7 @@
 		
 		<img class="block-centered rounded clip-bottom" src="https://source.unsplash.com/800x400/?travel&ab"></img>
 
-		<div class="block-left home-card inverted mb-4">
+		<div class="block-left home-card inverted">
 			<h1>Everything You Expect.</h1>
 				<ul>
 					<li>Round-trip transportation from USA departure city</li>
@@ -82,7 +75,7 @@
 				</ul>
 		</div>
 
-		<div class="text-centered mb-4">
+		<div class="text-centered mb-3 mt-3">
 			<span class="h1 big-text">Prices starting at $1000</span>
 			<a href="#" class="button">See our Tours</a>
 		</div>

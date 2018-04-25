@@ -10,115 +10,115 @@
 		"bell-italia": {
 			"id": "bell-italia",
 			"name": "Bell' Italia",
-			"image": "media/grand-europe"
+			"image": "media/grand-europe",
 		},
 
 		"renaissance-rome": {
 			"id": "renaissance-rome",
 			"name": "Renaissance and Rome",
-			"image": "media/grand-europe"
+			"image": "media/grand-europe",
 		},
 
 		"london-city": {
 			"id": "london-city",
 			"name": "London City Stay",
-			"image": "media/grand-europe"
+			"image": "media/grand-europe",
 		},
 
 		"king-arthurs": {
 			"id": "king-arthurs",
 			"name": "King Arthur's Britain",
-			"image": "media/grand-europe"
+			"image": "media/grand-europe",
 		},
 
 		"emerald-isle": {
 			"id": "emerald-isle",
 			"name": "The Emerald Isle",
-			"image": "media/grand-europe"
+			"image": "media/grand-europe",
 		},
 
 		"paris-chateaux": {
 			"id": "paris-chateaux",
 			"name": "Paris and the Chateaux",
-			"image": "media/grand-europe"
+			"image": "media/grand-europe",
 		},
 
 		"french-nice": {
 			"id": "french-nice",
 			"name": "French Studies in Nice",
-			"image": "media/grand-europe"
+			"image": "media/grand-europe",
 		},
 
 		"mediterranean": {
 			"id": "mediterranean",
 			"name": "The Mediterranean",
-			"image": "media/grand-europe"
+			"image": "media/grand-europe",
 		},
 
 		"egypt-nile": {
 			"id": "egypt-nile",
 			"name": "Egypt and the Nile",
-			"image": "media/grand-europe"
+			"image": "media/grand-europe",
 		},
 
 		"spanish-fiesta": {
 			"id": "spanish-fiesta",
 			"name": "Spanish Fiesta",
-			"image": "media/grand-europe"
+			"image": "media/grand-europe",
 		},
 
 		"spanish-salamanca": {
 			"id": "spanish-salamanca",
 			"name": "Learn Spanish in Salamanca",
-			"image": "media/grand-europe"
+			"image": "media/grand-europe",
 		},
 		
 		"mexican-vistas": {
 			"id": "mexican-vistas",
 			"name": "Mexican Vistas",
-			"image": "media/grand-europe"
+			"image": "media/grand-europe",
 		},
 
 		"mexicos-mayan": {
 			"id": "mexicos-mayan",
 			"name": "Mexico's Mayan Heritage",
-			"image": "media/grand-europe"
+			"image": "media/grand-europe",
 		},
 
 		"mayan-caribbean": {
 			"id": "mayan-caribbean",
 			"name": "Mayan Caribbean",
-			"image": "media/grand-europe"
+			"image": "media/grand-europe",
 		},
 
 		"costa-rica-tropics": {
 			"id": "costa-rica-tropics",
 			"name": " Cista Rica: Touch of Tropics",
-			"image": "media/grand-europe"
+			"image": "media/grand-europe",
 		},
 
 		"peru-inca": {
 			"id": "peru-inca",
 			"name": "Peru: Land of the Inca",
-			"image": "media/grand-europe"
+			"image": "media/grand-europe",
 		},
 
 		"australian-adventure": {
 			"id": "australian-adventure",
 			"name": "Australian Adventure",
-			"image": "media/grand-europe"
+			"image": "media/grand-europe",
 		},
 
 		"gateway-china": {
 			"id": "gateway-china",
 			"name": "Gateway to China",
-			"image": "media/grand-europe"
+			"image": "media/grand-europe",
 		},
 
 		"japan-rising-sun": {
 			"id": "japan-rising-sun",
 			"name": "Japan: Land of the Rising Sun",
-			"image": "media/grand-europe"
+			"image": "media/grand-europe",
 		}
 	}
 }

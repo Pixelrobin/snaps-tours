@@ -167,6 +167,21 @@ button.button--ghost:active, .button.button--ghost:active, input[type="button"].
   border-color: #212521;
 }
 
+button.button--inverted, .button.button--inverted, input[type="button"].button--inverted, input[type="submit"].button--inverted {
+  background-color: white;
+  color: #212521;
+}
+
+button.button--inverted:hover, button.button--inverted:focus, .button.button--inverted:hover, .button.button--inverted:focus, input[type="button"].button--inverted:hover, input[type="button"].button--inverted:focus, input[type="submit"].button--inverted:hover, input[type="submit"].button--inverted:focus {
+  background-color: #555b61;
+  color: white;
+}
+
+button.button--inverted:active, .button.button--inverted:active, input[type="button"].button--inverted:active, input[type="submit"].button--inverted:active {
+  background-color: white;
+  color: #212521;
+}
+
 input[type="text"], select, textarea {
   display: inline-block;
   height: 2.5rem;
@@ -226,6 +241,7 @@ ul {
 #wrapper {
   min-width: 760px;
   position: relative;
+  min-height: 100vh;
 }
 
 .page {
@@ -388,8 +404,24 @@ li.glide__slide {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  z-index: 1;
   cursor: pointer;
+}
+
+li.glide__slide .glide__slide__mouse-catcher {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgba(33, 37, 33, 0.5)), color-stop(50%, transparent));
+  background: -webkit-linear-gradient(bottom, rgba(33, 37, 33, 0.5) 0, transparent 50%);
+  background: -o-linear-gradient(bottom, rgba(33, 37, 33, 0.5) 0, transparent 50%);
+  background: linear-gradient(to top, rgba(33, 37, 33, 0.5) 0, transparent 50%);
+  background-size: 100% 200%;
+  background-position: top;
+  -webkit-transition: background-position 0.5s;
+  -o-transition: background-position 0.5s;
+  transition: background-position 0.5s;
 }
 
 li.glide__slide .glide__slide__content {
@@ -399,10 +431,9 @@ li.glide__slide .glide__slide__content {
   width: 100%;
   padding-bottom: 3.5rem;
   padding-right: 2rem;
-  z-index: 3;
 }
 
-li.glide__slide h1, li.glide__slide a {
+li.glide__slide h1, li.glide__slide p {
   display: block;
   width: 100%;
   opacity: 0;
@@ -419,7 +450,7 @@ li.glide__slide h1, li.glide__slide a {
   margin-bottom: 0.5rem;
 }
 
-li.glide__slide a {
+li.glide__slide p {
   -webkit-transition: opacity 0.5s 0.1s, -webkit-transform 0.5s 0.1s;
   transition: opacity 0.5s 0.1s, -webkit-transform 0.5s 0.1s;
   -o-transition: opacity 0.5s 0.1s, transform 0.5s 0.1s;
@@ -435,30 +466,11 @@ li.glide__slide.glide__slide--active {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-li.glide__slide.glide__slide--active h1, li.glide__slide.glide__slide--active a {
+li.glide__slide.glide__slide--active h1, li.glide__slide.glide__slide--active p {
   opacity: 1;
   -webkit-transform: none;
   -ms-transform: none;
   transform: none;
-}
-
-li.glide__slide.glide__slide--active::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(33, 37, 33, 0.5)), to(transparent));
-  background: -webkit-linear-gradient(bottom, rgba(33, 37, 33, 0.5), transparent);
-  background: -o-linear-gradient(bottom, rgba(33, 37, 33, 0.5), transparent);
-  background: linear-gradient(to top, rgba(33, 37, 33, 0.5), transparent);
-  -webkit-animation-name: fade-in;
-  animation-name: fade-in;
-  -webkit-animation-duration: 0.5s;
-  animation-duration: 0.5s;
-  border-bottom-right-radius: inherit;
-  border-bottom-left-radius: inherit;
 }
 
 li.glide__slide.glide__slide--active:hover {
@@ -467,7 +479,14 @@ li.glide__slide.glide__slide--active:hover {
   transform: scale(1);
 }
 
+li.glide__slide.glide__slide--active .glide__slide__mouse-catcher {
+  background-position: bottom;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
 .home-logo-circle {
+  position: relative;
   float: left;
   width: 10rem;
   height: 10rem;
@@ -479,6 +498,7 @@ li.glide__slide.glide__slide--active:hover {
   margin-right: 1rem;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index: 1;
 }
 
 .logo {
@@ -506,6 +526,14 @@ li.glide__slide.glide__slide--active:hover {
   padding: 1.5rem 0;
 }
 
+#nav-container.white a {
+  color: white;
+}
+
+#nav-container.white li::after {
+  background: white;
+}
+
 #home-nav-container {
   margin: 0 auto;
   height: 8rem;
@@ -513,7 +541,6 @@ li.glide__slide.glide__slide--active:hover {
   bottom: 0;
   width: 100%;
   left: 0;
-  z-index: 3;
   text-align: center;
 }
 
@@ -573,6 +600,102 @@ li.glide__slide.glide__slide--active:hover {
   width: 40rem;
 }
 
+/* Tour page */
+.fixed-bg {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -100;
+}
+
+.fixed-bg::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.4)), to(transparent));
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.4), transparent);
+  background: -o-linear-gradient(left, rgba(0, 0, 0, 0.4), transparent);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), transparent);
+}
+
+.tour__info {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: white;
+}
+
+.tour__info h1 {
+  font-size: 4rem;
+  margin: 0;
+  line-height: 4rem;
+}
+
+.tour__info h1 span {
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.tour__info .tour__info__cta {
+  display: inline-block;
+  padding: 3rem;
+  margin-left: 4rem;
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  position: relative;
+  background-color: #212521;
+}
+
+.tour-stops {
+  width: 500px;
+  padding-top: 50vh;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.tour-stops__stop {
+  width: 100%;
+  min-height: 100px;
+  background-color: white;
+  border-radius: 0.5rem;
+  margin-bottom: 4rem;
+}
+
+.tour-stops__stop img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.tour-stops__stop .tour-stops__stop__details {
+  padding: 2rem 1rem;
+}
+
+.tour-stops__stop .tour-stops__stop__details h2 {
+  margin: 0;
+  text-transform: initial;
+}
+
+.tour-stops__stop .tour-stops__stop__details h1 {
+  color: #555;
+  margin-bottom: 0.75rem;
+  text-transform: initial;
+}
+
+/* Helpers */
 .clip-bottom {
   margin-bottom: -2rem;
 }
@@ -611,6 +734,10 @@ li.glide__slide.glide__slide--active:hover {
 
 .inverted {
   background-color: #212521;
+  color: white;
+}
+
+.text-white {
   color: white;
 }
 

@@ -111,6 +111,21 @@ button, .button, input[type="button"], input[type="submit"] {
 			border-color: $color-black;
 		}
 	}
+
+	&.button--inverted {
+		background-color: white;
+		color: $color-black;
+
+		&:hover, &:focus {
+			background-color: $color-lightblack;
+			color: white;
+		}
+
+		&:active {
+			background-color: white;
+			color: $color-black;
+		}
+	}
 }
 
 input[type="text"], select, textarea {
@@ -165,6 +180,7 @@ ul {
 #wrapper {
 	min-width: 760px;
 	position: relative;
+	min-height: 100vh;
 }
 
 .page {
@@ -190,7 +206,6 @@ header {
 /* --- Glidejs theme --- */
 .glide {
 	position: relative;
-
 	&::after {
 		content: "";
 		position: absolute;
@@ -221,8 +236,20 @@ li.glide__slide {
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
-	z-index: 1;
 	cursor: pointer;
+
+	& .glide__slide__mouse-catcher {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		background: linear-gradient(to top, rgba($color-black, 0.5) 0, transparent 50%);
+		background-size: 100% 200%;
+		background-position: top;
+		transition: background-position 0.5s;
+	}
 
 	& .glide__slide__content {
 		position: absolute;
@@ -231,10 +258,9 @@ li.glide__slide {
 		width: 100%;
 		padding-bottom: 3.5rem;
 		padding-right: 2rem;
-		z-index: 3;
 	}
 
-	& h1, & a {
+	& h1, & p {
 		display: block;
 		width: 100%;
 		opacity: 0;
@@ -245,7 +271,7 @@ li.glide__slide {
 		margin-bottom: 0.5rem;
 	}
 
-	& a {
+	& p {
 		transition: opacity 0.5s 0.1s, transform 0.5s 0.1s;
 	}
 
@@ -253,32 +279,25 @@ li.glide__slide {
 		transform: scale(0.98);
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-		& h1, & a {
+		& h1, & p {
 			opacity: 1;
 			transform: none;
-		}
-
-		&::after {
-			content: "";
-			position: absolute;
-			left: 0;
-			top: 0;
-			width: 100%;
-			height: 100%;
-			background: linear-gradient(to top, rgba($color-black, 0.5), transparent);
-			animation-name: fade-in;
-			animation-duration: 0.5s;
-			border-bottom-right-radius: inherit;
-			border-bottom-left-radius: inherit;
 		}
 
 		&:hover {
 			transform: scale(1);
 		}
+
+		& .glide__slide__mouse-catcher {
+			background-position: bottom;
+			border-bottom-right-radius: 0.5rem;
+			border-bottom-left-radius: 0.5rem;
+		}
 	}
 }
 
 .home-logo-circle {
+	position: relative;
 	float: left;
 	width: 10rem;
 	height: 10rem;
@@ -289,6 +308,7 @@ li.glide__slide {
 	margin-top: -6rem;
 	margin-right: 1rem;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	z-index: 1;
 }
 
 .logo {
@@ -316,6 +336,11 @@ li.glide__slide {
 	}
 }
 
+#nav-container.white {
+	a { color: white; }
+	li::after { background: white; }
+}
+
 #home-nav-container {
 	margin: 0 auto;
 	height: 8rem;
@@ -323,7 +348,6 @@ li.glide__slide {
 	bottom: 0;
 	width: 100%;
 	left: 0;
-	z-index: 3;
 	text-align: center;
 }
 
@@ -374,6 +398,98 @@ li.glide__slide {
 	width: 40rem;
 }
 
+/* Tour page */
+
+.fixed-bg {
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: -100;
+
+	&::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(to right, rgba(0, 0, 0, 0.4), transparent);
+	}
+}
+
+.tour__info {
+	position: fixed;
+	top: 50%;
+	transform: translateY(-50%);
+	color: white;
+
+	& h1 {
+		font-size: 4rem;
+		margin: 0;
+		line-height: 4rem;
+		
+		& span {
+			display: block;
+			margin-bottom: 1.5rem;
+		}
+	}
+
+	& .tour__info__cta {
+		display: inline-block;
+		padding: 3rem;
+		margin-left: 4rem;
+		margin-top: 2rem;
+		border-radius: 0.5rem;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		position: relative;
+		background-color: $color-black;
+	}
+}
+
+.tour-stops {
+	width: 500px;
+	padding-top: 50vh;
+	margin-left: auto;
+	margin-right: 0;
+}
+
+.tour-stops__stop {
+	width: 100%;
+	min-height: 100px;
+	background-color: white;
+	border-radius: 0.5rem;
+	margin-bottom: 4rem;
+
+	& img {
+		width: 100%;
+		height: auto;
+		border-top-left-radius: 0.5rem;
+		border-top-right-radius: 0.5rem;
+	}
+
+	& .tour-stops__stop__details {
+		padding: 2rem 1rem;
+
+		& h2 {
+			margin: 0;
+			text-transform: initial;
+		}
+
+		& h1 {
+			color: #555;
+			margin-bottom: 0.75rem;
+			text-transform: initial;
+		}
+	}
+}
+
+/* Helpers */
+
 .clip-bottom {
 	margin-bottom: -2rem;
 }
@@ -413,6 +529,10 @@ li.glide__slide {
 .inverted {
 	background-color: $color-black;
 	color: white;
+}
+
+.text-white {
+	color: white
 }
 
 /* THE REST OF THESE ARE AUTO GENERATED HELPER CLASSES USING SASS SCRIPTS */

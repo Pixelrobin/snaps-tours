@@ -11,9 +11,12 @@
 
 	<body>
 		<div id="wrapper">
+			{% block preheader %}{% endblock %}
+
 			{% block header %}
-				<div id="nav-container">
-					<a href="{{ root }}/index.html"><img class="logo" src="{{ root }}/media/logo-black.svg"></a>
+				<div id="nav-container" class="{{ "white" if whiteNav else "" }}">
+				
+					<a href="{{ root }}/index.html"><img class="logo" src="{{ root }}/media/{{"logo-white" if whiteNav else "logo-black" }}.svg"></a>
 
 					<nav id="main-nav">
 						<ul>
