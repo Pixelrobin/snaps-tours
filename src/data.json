@@ -3,50 +3,61 @@
 		"grand-europe": {
 			"id": "grand-europe",
 			"name": "Grand Europe",
-			"image": "media/grand-europe",
+			"alt": "Paris rooftops with the Eiffel Tower in the background",
 			"stops": [
 				{
 					"name": "Departure from the USA",
-					"days": "Day 1"
+					"days": "Day 1",
+					"alt": "Planes on runway through glass with raindrops on it."
 				}, {
 					"name": "London",
-					"days": "Days 2 > 4",
-					"description": "Welcome to London where your Tour Director is waiting to take you to your hotel. On Day 3, guided sightseeing includes a visit to St. Paul’s Cathedral and the Changing of the Guard. Tonight, a West End theatre performance is included. On Day 4, enjoy a free day in London!"
+					"days": "Days 2 – 4",
+					"description": "Welcome to London where your Tour Director is waiting to take you to your hotel. On Day 3, guided sightseeing includes a visit to St. Paul’s Cathedral and the Changing of the Guard. Tonight, a West End theatre performance is included. On Day 4, enjoy a free day in London!",
+					"alt": "View of the Big Ben Clock Tower and surrounding buildings."
 				}, {
 					"name": "London-Paris",
-					"days": "Days 5 > 7",
-					"description": "Drive to board your ferry crossing the English Channel. Travel to Paris where you’ll join your Tour Director on an evening walking tour. On Day 6, guided sightseeing features visits to Gothic Notre Dame Cathedral and the Louvre Museum, yours to explore at your own pace using your “Tour Walking Guide.” Entrance fees are included. On Day 7, today’s highlight is a visit to Louis XIV’s elegant Versailles Palace."
+					"days": "Days 5 – 7",
+					"description": "Drive to board your ferry crossing the English Channel. Travel to Paris where you’ll join your Tour Director on an evening walking tour. On Day 6, guided sightseeing features visits to Gothic Notre Dame Cathedral and the Louvre Museum, yours to explore at your own pace using your “Tour Walking Guide.” Entrance fees are included. On Day 7, today’s highlight is a visit to Louis XIV’s elegant Versailles Palace.",
+					"alt": "View of the Eiffel Tower on a clear, sunny day"
 				}, {
 					"name": "Paris-Lausanna-France",
-					"days": "Days 8 > 11",
-					"description": "Board the TGV to Lausanne. Stop in the Swiss capital of Bern in route to the Lucerne area. On Day 9, see the Kapellbruecke and the Lion Monument. On your free afternoon, opt for an exciting Alpine peak excursion. On Day 10, drive across the border to Italy en route to Renaissance Florence. On Day 11, guided sightseeing includes visits to the Duomo, The Church of Santa Croce, The Accademia to see Michelangelo’s David and a Florentine leather factory."
+					"days": "Days 8 – 11",
+					"description": "Board the TGV to Lausanne. Stop in the Swiss capital of Bern in route to the Lucerne area. On Day 9, see the Kapellbruecke and the Lion Monument. On your free afternoon, opt for an exciting Alpine peak excursion. On Day 10, drive across the border to Italy en route to Renaissance Florence. On Day 11, guided sightseeing includes visits to the Duomo, The Church of Santa Croce, The Accademia to see Michelangelo’s David and a Florentine leather factory.",
+					"alt": "View of Lausanna from above in the orange sunset."
 				}, {
-					"days": "Days 12 > 13",
+					"days": "Days 12 – 13",
 					"name": "Florence-Assisi-Rome",
-					"description": "Travel to Assisi to visit St. Francis’ Basilica en route to Rome. On Day 13, guided sightseeing of the Eternal City includes visits to the Roman Forum, the Colosseum, St. Peter’s Basilica and the Sistine Chapel"
+					"description": "Travel to Assisi to visit St. Francis’ Basilica en route to Rome. On Day 13, guided sightseeing of the Eternal City includes visits to the Roman Forum, the Colosseum, St. Peter’s Basilica and the Sistine Chapel",
+					"alt": "View of the Roman Colosseum"
 				}, {
-					"days": "Days 14 > 15",
+					"days": "Days 14 – 15",
 					"name": "Rome-Pompeii-Sorrento",
-					"description": "Visit Pompeii’s Ruins once buried by Mt. Vesuvius en route to clifftop Sorrento. On Day 15, ferry to magical Capri for free time to enjoy the island scenery before returning to Sorrento"
+					"description": "Visit Pompeii’s Ruins once buried by Mt. Vesuvius en route to clifftop Sorrento. On Day 15, ferry to magical Capri for free time to enjoy the island scenery before returning to Sorrento",
+					"alt": "View of Sorrento's cliffside buildings meeting the ocean."
 				}, {
 					"days": "Day 16",
 					"name": "Sorrento-Ferry to Greece",
-					"description": "Drive to Bari to board your overnight ferry across the Ionian Sea to Greece"
+					"description": "Drive to Bari to board your overnight ferry across the Ionian Sea to Greece",
+					"alt": "Sun setting over the Ionian Sea."
 				}, {
-					"days": "Days 17 > 18",
+					"days": "Days 17 – 18",
 					"name": "Patras-Delphi-Athens",
-					"description": "Arrive in Patras late in the afternoon. On Day 18, cross the Gulf of Corinth to the shrine of ancient Delphi to visit the Stadium, the Temple of Apollo, and the Amphitheatre. Proceed to Athens for your overnight stay"
+					"description": "Arrive in Patras late in the afternoon. On Day 18, cross the Gulf of Corinth to the shrine of ancient Delphi to visit the Stadium, the Temple of Apollo, and the Amphitheatre. Proceed to Athens for your overnight stay",
+					"alt": "Windmill in the sunset."
 				}, {
-					"days": "Days 19 > 21",
+					"days": "Days 19 – 21",
 					"name": "Mykonos-Rhodes-Kusadasi-Patmos",
-					"description": "You’ll drive to Piraeus today to board your Greek Island Cruise. Your first stop on you cruise is the legendary island of Mykonos. On Day 20, dock at mystical Rhodes for a glorious free day. On Day 21, travel to the islands of Kusadasi and Patmos. Tonight, join your ship’s captain at a special farewell dinner"
+					"description": "You’ll drive to Piraeus today to board your Greek Island Cruise. Your first stop on you cruise is the legendary island of Mykonos. On Day 20, dock at mystical Rhodes for a glorious free day. On Day 21, travel to the islands of Kusadasi and Patmos. Tonight, join your ship’s captain at a special farewell dinner",
+					"alt": "Mykonos buildings meet the ocean on a clear day."
 				}, {
 					"days": "Day 22",
 					"name": "Athens",
-					"description": "Back in Athens, your guided sightseeing tour includes visits to the Parthenon, the Theatre of Dionysius, and the National Archaeological Museum"
+					"description": "Back in Athens, your guided sightseeing tour includes visits to the Parthenon, the Theatre of Dionysius, and the National Archaeological Museum",
+					"alt": "Athen ruins with a cloudy sky in the background."
 				}, {
 					"days": "Day 23",
-					"name": "Depart for the USA"
+					"name": "Depart for the USA",
+					"alt": "Planes on runway through glass with raindrops on it."
 				}
 			],
 			"price" : "2500"
@@ -55,40 +66,48 @@
 		"bell-italia": {
 			"id": "bell-italia",
 			"name": "Bell' Italia",
-			"image": "media/grand-europe",
+			"alt": "Colorfoul Italian city on a cliffside with the ocean to the right",
 			"price": "1500",
 			"stops": [
 				{
-					"day": "Day 1",
+					"days": "Day 1",
 					"name": "Depart from the USA",
-					"description": "Soar across the Atlantic to Milan, Italy’s fashion capital. Upon arrival, meet your bilingual Tour Director who will escort you to your comfortable hotel for check in."
+					"description": "Soar across the Atlantic to Milan, Italy’s fashion capital. Upon arrival, meet your bilingual Tour Director who will escort you to your comfortable hotel for check in.",
+					"alt": "Planes on runway through glass with raindrops on it."
 				}, {
-					"day": "Days 2 > 3",
+					"days": "Days 2 – 3",
 					"name": "Venice",
-					"description": "Head for Venice on Day 2 where you’ll experience the enchantment of the Floating City. A local guide will lead you through St. Mark’s Square. Learn how the Basilica di San Marco acquired St. Mark’s body in the 11th century, and listen for the shouts of gondoliers ferrying through the Grand Canal. Visit the Doges’ Palace, former home of the city’s powerful dukes, and witness Venice’s skilled artisans at work during a glassblowing demonstration. "
+					"description": "Head for Venice on Day 2 where you’ll experience the enchantment of the Floating City. A local guide will lead you through St. Mark’s Square. Learn how the Basilica di San Marco acquired St. Mark’s body in the 11th century, and listen for the shouts of gondoliers ferrying through the Grand Canal. Visit the Doges’ Palace, former home of the city’s powerful dukes, and witness Venice’s skilled artisans at work during a glassblowing demonstration.",
+					"alt": "Venice River and buildings under a purple sky."
 				}, {
-					"day": "Day 4",
+					"days": "Day 4",
 					"name": "Florence",
-					"description": "Travel to Florence, birthplace of the Renaissance. Stop at the final resting place of Michelangelo. See Giotto’s Bell Tower and the imposing marble cathedral in the Piazza del Duomo. Marvel at Michelangelo’s David and visit a leather workshop during your guided stroll. "
+					"description": "Travel to Florence, birthplace of the Renaissance. Stop at the final resting place of Michelangelo. See Giotto’s Bell Tower and the imposing marble cathedral in the Piazza del Duomo. Marvel at Michelangelo’s David and visit a leather workshop during your guided stroll.",
+					"alt": "View of Lausanna from above in the orange sunset."
 				}, {
-					"day": "Days 5 > 6",
-					"name": "Siena – Assisi ",
-					"description": "Join our optional excursion to Siena. In the Duomo, view works by such Renaissance masters as Donatello and Michelangelo. On Day 6, stop in Assisi, where, in the 12th century, St. Francis founded the Franciscan order, dedicated to asceticism, poverty and chastity. Continue on to Rome for an orientation tour of the Eternal City, which includes the Trevi Fountain and the Forum. "
+					"days": "Days 5 – 6",
+					"name": "Siena ▸ Assisi ",
+					"description": "Join our optional excursion to Siena. In the Duomo, view works by such Renaissance masters as Donatello and Michelangelo. On Day 6, stop in Assisi, where, in the 12th century, St. Francis founded the Franciscan order, dedicated to asceticism, poverty and chastity. Continue on to Rome for an orientation tour of the Eternal City, which includes the Trevi Fountain and the Forum.",
+					"alt": "Rooftops of buildings from Siena"
 				}, {
-					"day": "Day 7",
+					"days": "Day 7",
 					"name": "Vatican City - Rome",
-					"description": "As you view the awe-inspiring frescoes that Michelangelo painted on the ceiling of the Sistine Chapel, consider that the artist took on the job only because Pope Julius ordered him to—Michelangelo preferred sculpting to painting. Walk through the heart of the ancient Roman Empire and visit the mighty Colosseum on your guided tour of Rome. "
+					"description": "As you view the awe-inspiring frescoes that Michelangelo painted on the ceiling of the Sistine Chapel, consider that the artist took on the job only because Pope Julius ordered him to—Michelangelo preferred sculpting to painting. Walk through the heart of the ancient Roman Empire and visit the mighty Colosseum on your guided tour of Rome.",
+					"alt": "Street and buildings in Vatican City."
 				}, {
-					"day": "Day 8",
+					"days": "Day 8",
 					"name": "Pompeii",
-					"description": "Opt to visit Pompeii, an ancient Roman resort, now one of the world’s richest archaeological sites. Learn how wealthy Romans lived 2,000 years ago as you tour the well-preserved remains, excavated from the volcanic ash of Mt. Vesuvius. "
+					"description": "Opt to visit Pompeii, an ancient Roman resort, now one of the world’s richest archaeological sites. Learn how wealthy Romans lived 2,000 years ago as you tour the well-preserved remains, excavated from the volcanic ash of Mt. Vesuvius. ",
+					"alt": "Ancient ruins in Pompeii"
 				}, {
-					"day": "Days 9 > 11",
+					"days": "Days 9 – 11",
 					"name": "Amalfi Coast Extension",
-					"description": "Extend your stay for three days to visit Italy’s picturesque coast, which includes Sorrento and Capri. "
+					"description": "Extend your stay for three days to visit Italy’s picturesque coast, which includes Sorrento and Capri.",
+					"alt": "View of the ocean from a rocky coastline."
 				}, {
-					"day": "Day 12",
-					"name": "Depart for the USA "
+					"days": "Day 12",
+					"name": "Depart for the USA",
+					"alt": "Planes on runway through glass with raindrops on it."
 				}
 			]
 		},
@@ -96,127 +115,126 @@
 		"renaissance-rome": {
 			"id": "renaissance-rome",
 			"name": "Renaissance and Rome",
-			"image": "media/grand-europe",
+			"alt": "View of the inside ceiling of a Roman Chapel",
 			"price" : "2000"
 		},
 
 		"london-city": {
 			"id": "london-city",
 			"name": "London City Stay",
-			"image": "media/grand-europe",
+			"alt": "Inside the London train station.",
 			"price" : "2000"
 		},
 
 		"king-arthurs": {
 			"id": "king-arthurs",
 			"name": "King Arthur's Britain",
-			
-			"image": "media/grand-europe",
+			"alt": "Grassy hills with a few remains of old artitecture.",
 			"price" : "2575"
 		},
 
 		"emerald-isle": {
 			"id": "emerald-isle",
 			"name": "The Emerald Isle",
-			"image": "media/grand-europe",
+			"alt": "High cliffs of a mountain meet an ocean to the left",
 			"price" : "1500"
 		},
 
 		"paris-chateaux": {
 			"id": "paris-chateaux",
 			"name": "Paris and the Chateaux",
-			"image": "media/grand-europe",
+			"alt": "Street in Paris with a building in the background.",
 			"price" : "3000"
 		},
 
 		"french-nice": {
 			"id": "french-nice",
 			"name": "French Studies in Nice",
-			"image": "media/grand-europe",
+			"alt": "View of a Beach in Nice with resorts and mountains in the back",
 			"price" : "2500"
 		},
 
 		"mediterranean": {
 			"id": "mediterranean",
 			"name": "The Mediterranean",
-			"image": "media/grand-europe",
+			"alt": "View of the ocean from a white balcony",
 			"price" : "3250"
 		},
 
 		"egypt-nile": {
 			"id": "egypt-nile",
 			"name": "Egypt and the Nile",
-			"image": "media/grand-europe",
+			"alt": "Ancient Egyption sculptures",
 			"price" : "2000"
 		},
 
 		"spanish-fiesta": {
 			"id": "spanish-fiesta",
 			"name": "Spanish Fiesta",
-			"image": "media/grand-europe",
+			"alt": "Colorful parade in a dark street from the top",
 			"price" : "1575"
 		},
 
 		"spanish-salamanca": {
 			"id": "spanish-salamanca",
 			"name": "Learn Spanish in Salamanca",
-			"image": "media/grand-europe",
+			"alt": "View of an elegant building.",
 			"price" : "1700"
 		},
 		
 		"mexican-vistas": {
 			"id": "mexican-vistas",
 			"name": "Mexican Vistas",
-			"image": "media/grand-europe",
+			"alt": "View of an ocean through palm trees and a beach.",
 			"price" : "1000"
 		},
 
 		"mexicos-mayan": {
 			"id": "mexicos-mayan",
 			"name": "Mexico's Mayan Heritage",
-			"image": "media/grand-europe",
+			"alt": "Mayan Pyramid Temple",
 			"price" : "1400"
 		},
 
 		"mayan-caribbean": {
 			"id": "mayan-caribbean",
 			"name": "Mayan Caribbean",
-			"image": "media/grand-europe",
+			"alt": "Beach with palm trees",
 			"price" : "1700"
 		},
 
 		"costa-rica-tropics": {
 			"id": "costa-rica-tropics",
 			"name": " Cista Rica: Touch of Tropics",
-			"image": "media/grand-europe",
+			"alt": "Man walking and holding a surf board in the sunset",
 			"price" : "1300"
 		},
 
 		"peru-inca": {
 			"id": "peru-inca",
 			"name": "Peru: Land of the Inca",
-			"image": "media/grand-europe",
+			"alt": "View of the Peru mountains",
 			"price" : "2000"
 		},
 
 		"australian-adventure": {
 			"id": "australian-adventure",
 			"name": "Australian Adventure",
-			"image": "media/grand-europe",
+			"alt": "Rooftop of the Australian Sydney Opera House",
 			"price" : "3000"
 		},
 
 		"gateway-china": {
 			"id": "gateway-china",
 			"name": "Gateway to China",
-			"image": "media/grand-europe",
+			"alt": "Chinese street and buildings with bright red lanterns hanging off of them",
 			"price" : "3000"
 		},
 
 		"japan-rising-sun": {
 			"id": "japan-rising-sun",
 			"name": "Japan: Land of the Rising Sun",
-			"image": "media/grand-europe",
+			"alt": "Roof from a bright red japanese building",
 			"price": "2800"
 		}
 	}

@@ -121,7 +121,7 @@ gulp.task('dev', gulp.series('pages', 'styles', 'scripts', () => {
 	gulp.watch('src/scripts/**/*.js', gulp.parallel('scripts'))
 		.on('change', bs.reload);
 	
-	gulp.watch('src/data.json', gulp.parallel('data', 'pages'))
+	gulp.watch('src/data.json', gulp.parallel('pages'))
 		.on('change', bs.reload);
 
 	gulp.watch('src/media/**', gulp.parallel('media'));
@@ -133,3 +133,5 @@ gulp.task('dev', gulp.series('pages', 'styles', 'scripts', () => {
 		}
 	});
 }));
+
+gulp.task('default', gulp.series('pages', 'styles', 'scripts', 'media'));

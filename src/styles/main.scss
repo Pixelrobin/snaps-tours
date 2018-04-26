@@ -25,7 +25,14 @@ p {
 	line-height: 150%;
 	max-width: 80ch;
 	margin: 0;
-	margin-bottom: 0.5rem;
+	margin-bottom: 1rem;
+
+	&.compact {
+		width: 90%;
+		max-width: 75ch;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
@@ -95,10 +102,10 @@ button, .button, input[type="button"], input[type="submit"] {
 	}
 
 	&.button--ghost {
-		background-color: white;
+		background-color: transparent;
 		border: 0.15rem solid $color-black;
 		color: $color-black;
-		line-height: 1.2rem;
+		line-height: 2.2rem;
 
 		&:hover, &:focus {
 			background-color: $color-lightblack;
@@ -128,7 +135,7 @@ button, .button, input[type="button"], input[type="submit"] {
 	}
 }
 
-input[type="text"], select, textarea {
+input[type="text"], input[type="number"], input[type="email"], input[type="tel"], select, textarea {
 	display: inline-block;
 	height: 2.5rem;
 	border-radius: 0.25rem;
@@ -164,7 +171,7 @@ label {
 	font-size: 1rem;
 
 	&.label--top {
-		display: block;
+		display: inline-block;
 		margin-right: 0;
 		margin-bottom: 0.25rem;
 	}
@@ -192,6 +199,21 @@ ul {
 header {
 	position: relative;
 	padding-bottom: 8rem;
+}
+
+footer {
+	padding: 2rem 0;
+	background-color: white;
+}
+
+figure {
+	margin-bottom: 1rem;
+
+	& figcaption {
+		text-align: center;
+		padding: 0.5rem 0;
+		font-style: italic;
+	}
 }
 
 #tours-list {
@@ -237,6 +259,7 @@ li.glide__slide {
 	background-size: cover;
 	background-repeat: no-repeat;
 	cursor: pointer;
+	background-color: $color-black;
 
 	& .glide__slide__mouse-catcher {
 		position: absolute;
@@ -299,8 +322,6 @@ li.glide__slide {
 .home-logo-circle {
 	position: relative;
 	float: left;
-	width: 10rem;
-	height: 10rem;
 	min-width: 12rem;
 	min-height: 12rem;
 	background-color: white;
@@ -309,6 +330,15 @@ li.glide__slide {
 	margin-right: 1rem;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	z-index: 1;
+
+	& img {
+		display: block;
+		margin: 0 1rem;
+		width: 10rem;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
 }
 
 .logo {
@@ -327,7 +357,7 @@ li.glide__slide {
 #nav-container {
 	width: 100%;
 	text-align: center;
-	padding-top: 1rem;
+	padding-top: 2rem;
 	margin-bottom: 1rem;
 	
 	& #main-nav {
@@ -361,7 +391,7 @@ li.glide__slide {
 		font-family: $font-roboto;
 		font-size: 2rem;
 		text-transform: uppercase;
-		margin-right: 2rem;
+		margin-right: 1.5rem;
 		display: block;
 		float: left;
 		position: relative;
@@ -381,6 +411,14 @@ li.glide__slide {
 
 		&:hover::after {
 			transform: scaleX(1);
+		}
+
+		& .fab {
+			line-height: 1.5rem;
+		}
+
+		&.main-nav__smaller {
+			margin-right: 0.75rem;
 		}
 	}
 
@@ -418,7 +456,7 @@ li.glide__slide {
 		top: 0;
 		width: 100%;
 		height: 100%;
-		background: linear-gradient(to right, rgba(0, 0, 0, 0.4), transparent);
+		background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.1));
 	}
 }
 
@@ -488,7 +526,90 @@ li.glide__slide {
 	}
 }
 
+/* Tours page */
+ul.tours-list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+
+	& a {
+		color: white;
+		text-decoration: none;
+
+		&:hover li {
+			transform: scale(1.01);
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		} 
+	}
+
+	& li {
+		margin: 0;
+		width: 100%;
+		background-color: $color-black;
+		min-height: 12rem;
+		margin-bottom: 2rem;
+		background-position: center;
+		background-size: cover;
+		border-radius: 0.5rem;
+		text-align: center;
+		position: relative;
+		transition: transform 0.5s, box-shadow 0.5s;
+
+		& .tours-list__darkener {
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			border-radius: inherit;
+			background-color: $color-black;
+			opacity: 0.5;
+		}
+
+		& .tours-list__content {
+			position: absolute;
+			top: 50%;
+			width: 100%;
+			transform: translateY(-50%);
+		}
+	}
+}
+
+.faces__row {
+	text-align: center;
+	margin-bottom: 2rem;
+
+	& .faces__row__face {
+		display: inline-block;
+		margin-right: 1rem;
+
+		& .face__row__face__image {
+			width: 10rem;
+			height: 10rem;
+			border-radius: 50%;
+			background-position: top;
+			background-size: cover;
+			background-repeat: no-repeat;
+			margin-bottom: 0.5rem;
+			transition: transform 0.5s;
+
+			&:hover {
+				transform: scale(1.02) rotate(2deg);
+			}
+		}
+
+		& .face__row__face__name {
+			font-style: italic;
+		}
+	}
+}
+
 /* Helpers */
+
+.full-width {
+	width: 100%;
+	max-width: 100%;
+}
 
 .clip-bottom {
 	margin-bottom: -2rem;
@@ -502,6 +623,14 @@ li.glide__slide {
 
 .text-centered {
 	text-align: center!important;
+}
+
+.text-left {
+	text-align: left!important;
+}
+
+.text-right {
+	text-align: right!important;
 }
 
 .block-centered {

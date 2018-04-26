@@ -1,5 +1,8 @@
 {% extends "./deps/_template.njk" %}
 
+{% set title = "Home" %}
+{% set metaDescription = "Snaps! Tours offers the cheapest and most cost effective tours without comprimising quality. Ideal for Students and Young Adults for Spring Breaks and Vacations alike." %}
+
 {% block head %}
 	<script type="text/javascript" src="./scripts/index.js"></script>
 {% endblock %}
@@ -8,12 +11,18 @@
 	<header>
 		<a href="{{ root }}/index.html"><div id="home-nav-container"></a>
 			<nav id="main-nav">
-				<div class="home-logo-circle"></div>
+				<a href="{{ root }}/index.html">
+					<div class="home-logo-circle">
+						<img src="{{ root }}/media/logo-black.svg">
+					</div>
+				</a>
 				<ul>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Tours</a></li>
-					<li><a href="#">Pricing</a></li>
-					<li><a href="{{ root }}/pages/test.html">Test</a></li>
+					<li><a href="{{ root }}/pages/tours.html">Tours</a></li>
+					<li><a href="{{ root }}/pages/about.html">About Us</a></li>
+					<li><a href="{{ root }}/pages/book.html">Book</a></li>
+					<li class="main-nav__smaller"><a href="https://www.twitter.com"><span class="fab fa-twitter"></span></a></li>
+					<li class="main-nav__smaller"><a href="https://www.instagram.com"><span class="fab fa-instagram"></span></a></li>
+					<li class="main-nav__smaller"><a href="https://www.facebook.com"><span class="fab fa-facebook"></span></a></li>
 				</ul>
 			</nav>
 		</div>
@@ -23,8 +32,16 @@
 				<div class="glide__track" data-glide-el="track">
 					<ul class="glide__slides">
 						{% for id, tour in tours %}
-							<li class="glide__slide" style="background-image: url({{ root }}/{{ tour.image }}-small.jpg);">
+							<li class="glide__slide" style="background-image: url({{ root }}/media/tours/{{ tour.id }}.jpg);" data-index={{ loop.index0 }}>
+								<!-- Alt text for screen readers since using div: -->
+								<div role="img" aria-label="{{ tour.alt }}"></div>
+
+								{% if tour.stops %}
 								<a href="{{ root }}/pages/tours/{{ tour.id }}.html">
+								{% else %}
+								<a href="#">
+								{% endif %}
+
 									<div class="glide__slide__mouse-catcher">
 										<div class="glide__slide__content">
 											<h1>{{ tour.name }}</h1>
@@ -50,18 +67,18 @@
 
 {% block body %}
 	<div class="page">	
-		<h1 class="text-centered big-text mb-2">The Ultimate Escape.</h1>
+		<h1 class="text-centered big-text mb-2 mt-1">The Ultimate Escape.</h1>
 		
 		<p class="block-centered mb-2">Over two million people have experienced other countries, learned other languages or participated in intercultural exchanges with Snaps! Our global network of suppliers, coupled with the largest volume of travelers in the industry, gives us the power to negotiate the best rates on flights, hotels, meals, and transportation—savings we pass along to you!</p>
 
-		<img class="block-left rounded clip-bottom" src="https://source.unsplash.com/800x400/?travel&aa"></img>
+		<img class="block-left rounded clip-bottom" src="{{ root }}/media/admiring.jpg" alt="Tourist admiring Venice arcitecture while standing on bridge">
 		
 		<div class="block-right home-card inverted clip-bottom">
 			<h1>Putting YOU First.</h1>
 			<p>Our quality control staff travels year-round—inspecting hotels, evaluating tour directors, visiting sights—to ensure our exacting quality standards. No one else offers these prices for this level of quality.</p>
 		</div>
 		
-		<img class="block-centered rounded clip-bottom" src="https://source.unsplash.com/800x400/?travel&ab"></img>
+		<img class="block-centered rounded clip-bottom" src="{{ root }}/media/mexico-beach.jpg" alt="View of a mexican beach from high in the sky.">
 
 		<div class="block-left home-card inverted">
 			<h1>Everything You Expect.</h1>
@@ -77,7 +94,9 @@
 
 		<div class="text-centered mb-3 mt-3">
 			<span class="h1 big-text">Prices starting at $1000</span>
-			<a href="#" class="button">See our Tours</a>
+			<a href="{{ root }}/pages/tours.html" class="button">See our Tours</a>
 		</div>
+
+		<img class="block-centered rounded mb-2" src="{{ root }}/media/venice.jpg" alt="View of Venice shoreline with people approaching the shore in boats with buildings in the back."></img>
 	</div>
 {% endblock %}

@@ -2,9 +2,14 @@
 
 <html>
 	<head>
-		<title></title>
+		<title>Home - Snaps! Tours.</title>
+		<meta name="description" content="Snaps! Tours offers the cheapest and most cost effective tours without comprimising quality. Ideal for Students and Young Adults for Spring Breaks and Vacations alike." />
+
 		<link rel="stylesheet" href="./css/main.css">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
+
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/brands.css" integrity="sha384-KtmfosZaF4BaDBojD9RXBSrq5pNEO79xGiggBxf8tsX+w2dBRpVW5o0BPto2Rb2F" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/fontawesome.css" integrity="sha384-8WwquHbb2jqa7gKWSoAwbJBV2Q+/rQRss9UXL5wlvXOZfSodONmVnifo/+5xJIWX" crossorigin="anonymous">
 
 		
 	<script type="text/javascript" src="./scripts/index.js"></script>
@@ -19,12 +24,18 @@
 	<header>
 		<a href="./index.html"><div id="home-nav-container"></a>
 			<nav id="main-nav">
-				<div class="home-logo-circle"></div>
+				<a href="./index.html">
+					<div class="home-logo-circle">
+						<img src="./media/logo-black.svg">
+					</div>
+				</a>
 				<ul>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Tours</a></li>
-					<li><a href="#">Pricing</a></li>
-					<li><a href="./pages/test.html">Test</a></li>
+					<li><a href="./pages/tours.html">Tours</a></li>
+					<li><a href="./pages/about.html">About Us</a></li>
+					<li><a href="./pages/book.html">Book</a></li>
+					<li class="main-nav__smaller"><a href="https://www.twitter.com"><span class="fab fa-twitter"></span></a></li>
+					<li class="main-nav__smaller"><a href="https://www.instagram.com"><span class="fab fa-instagram"></span></a></li>
+					<li class="main-nav__smaller"><a href="https://www.facebook.com"><span class="fab fa-facebook"></span></a></li>
 				</ul>
 			</nav>
 		</div>
@@ -34,8 +45,14 @@
 				<div class="glide__track" data-glide-el="track">
 					<ul class="glide__slides">
 						
-							<li class="glide__slide" style="background-image: url(./media/grand-europe-small.jpg);">
+							<li class="glide__slide" style="background-image: url(./media/tours/grand-europe.jpg);" data-index=0>
+								<!-- Alt text for screen readers since using div: -->
+								<div role="img" aria-label="Paris rooftops with the Eiffel Tower in the background"></div>
+
+								
 								<a href="./pages/tours/grand-europe.html">
+								
+
 									<div class="glide__slide__mouse-catcher">
 										<div class="glide__slide__content">
 											<h1>Grand Europe</h1>
@@ -45,8 +62,14 @@
 								</a>
 							</li>
 						
-							<li class="glide__slide" style="background-image: url(./media/grand-europe-small.jpg);">
+							<li class="glide__slide" style="background-image: url(./media/tours/bell-italia.jpg);" data-index=1>
+								<!-- Alt text for screen readers since using div: -->
+								<div role="img" aria-label="Colorfoul Italian city on a cliffside with the ocean to the right"></div>
+
+								
 								<a href="./pages/tours/bell-italia.html">
+								
+
 									<div class="glide__slide__mouse-catcher">
 										<div class="glide__slide__content">
 											<h1>Bell&#39; Italia</h1>
@@ -56,8 +79,14 @@
 								</a>
 							</li>
 						
-							<li class="glide__slide" style="background-image: url(./media/grand-europe-small.jpg);">
-								<a href="./pages/tours/renaissance-rome.html">
+							<li class="glide__slide" style="background-image: url(./media/tours/renaissance-rome.jpg);" data-index=2>
+								<!-- Alt text for screen readers since using div: -->
+								<div role="img" aria-label="View of the inside ceiling of a Roman Chapel"></div>
+
+								
+								<a href="#">
+								
+
 									<div class="glide__slide__mouse-catcher">
 										<div class="glide__slide__content">
 											<h1>Renaissance and Rome</h1>
@@ -67,8 +96,14 @@
 								</a>
 							</li>
 						
-							<li class="glide__slide" style="background-image: url(./media/grand-europe-small.jpg);">
-								<a href="./pages/tours/london-city.html">
+							<li class="glide__slide" style="background-image: url(./media/tours/london-city.jpg);" data-index=3>
+								<!-- Alt text for screen readers since using div: -->
+								<div role="img" aria-label="Inside the London train station."></div>
+
+								
+								<a href="#">
+								
+
 									<div class="glide__slide__mouse-catcher">
 										<div class="glide__slide__content">
 											<h1>London City Stay</h1>
@@ -78,8 +113,14 @@
 								</a>
 							</li>
 						
-							<li class="glide__slide" style="background-image: url(./media/grand-europe-small.jpg);">
-								<a href="./pages/tours/king-arthurs.html">
+							<li class="glide__slide" style="background-image: url(./media/tours/king-arthurs.jpg);" data-index=4>
+								<!-- Alt text for screen readers since using div: -->
+								<div role="img" aria-label="Grassy hills with a few remains of old artitecture."></div>
+
+								
+								<a href="#">
+								
+
 									<div class="glide__slide__mouse-catcher">
 										<div class="glide__slide__content">
 											<h1>King Arthur&#39;s Britain</h1>
@@ -89,8 +130,14 @@
 								</a>
 							</li>
 						
-							<li class="glide__slide" style="background-image: url(./media/grand-europe-small.jpg);">
-								<a href="./pages/tours/emerald-isle.html">
+							<li class="glide__slide" style="background-image: url(./media/tours/emerald-isle.jpg);" data-index=5>
+								<!-- Alt text for screen readers since using div: -->
+								<div role="img" aria-label="High cliffs of a mountain meet an ocean to the left"></div>
+
+								
+								<a href="#">
+								
+
 									<div class="glide__slide__mouse-catcher">
 										<div class="glide__slide__content">
 											<h1>The Emerald Isle</h1>
@@ -100,8 +147,14 @@
 								</a>
 							</li>
 						
-							<li class="glide__slide" style="background-image: url(./media/grand-europe-small.jpg);">
-								<a href="./pages/tours/paris-chateaux.html">
+							<li class="glide__slide" style="background-image: url(./media/tours/paris-chateaux.jpg);" data-index=6>
+								<!-- Alt text for screen readers since using div: -->
+								<div role="img" aria-label="Street in Paris with a building in the background."></div>
+
+								
+								<a href="#">
+								
+
 									<div class="glide__slide__mouse-catcher">
 										<div class="glide__slide__content">
 											<h1>Paris and the Chateaux</h1>
@@ -111,8 +164,14 @@
 								</a>
 							</li>
 						
-							<li class="glide__slide" style="background-image: url(./media/grand-europe-small.jpg);">
-								<a href="./pages/tours/french-nice.html">
+							<li class="glide__slide" style="background-image: url(./media/tours/french-nice.jpg);" data-index=7>
+								<!-- Alt text for screen readers since using div: -->
+								<div role="img" aria-label="View of a Beach in Nice with resorts and mountains in the back"></div>
+
+								
+								<a href="#">
+								
+
 									<div class="glide__slide__mouse-catcher">
 										<div class="glide__slide__content">
 											<h1>French Studies in Nice</h1>
@@ -122,8 +181,14 @@
 								</a>
 							</li>
 						
-							<li class="glide__slide" style="background-image: url(./media/grand-europe-small.jpg);">
-								<a href="./pages/tours/mediterranean.html">
+							<li class="glide__slide" style="background-image: url(./media/tours/mediterranean.jpg);" data-index=8>
+								<!-- Alt text for screen readers since using div: -->
+								<div role="img" aria-label="View of the ocean from a white balcony"></div>
+
+								
+								<a href="#">
+								
+
 									<div class="glide__slide__mouse-catcher">
 										<div class="glide__slide__content">
 											<h1>The Mediterranean</h1>
@@ -133,8 +198,14 @@
 								</a>
 							</li>
 						
-							<li class="glide__slide" style="background-image: url(./media/grand-europe-small.jpg);">
-								<a href="./pages/tours/egypt-nile.html">
+							<li class="glide__slide" style="background-image: url(./media/tours/egypt-nile.jpg);" data-index=9>
+								<!-- Alt text for screen readers since using div: -->
+								<div role="img" aria-label="Ancient Egyption sculptures"></div>
+
+								
+								<a href="#">
+								
+
 									<div class="glide__slide__mouse-catcher">
 										<div class="glide__slide__content">
 											<h1>Egypt and the Nile</h1>
@@ -144,8 +215,14 @@
 								</a>
 							</li>
 						
-							<li class="glide__slide" style="background-image: url(./media/grand-europe-small.jpg);">
-								<a href="./pages/tours/spanish-fiesta.html">
+							<li class="glide__slide" style="background-image: url(./media/tours/spanish-fiesta.jpg);" data-index=10>
+								<!-- Alt text for screen readers since using div: -->
+								<div role="img" aria-label="Colorful parade in a dark street from the top"></div>
+
+								
+								<a href="#">
+								
+
 									<div class="glide__slide__mouse-catcher">
 										<div class="glide__slide__content">
 											<h1>Spanish Fiesta</h1>
@@ -155,8 +232,14 @@
 								</a>
 							</li>
 						
-							<li class="glide__slide" style="background-image: url(./media/grand-europe-small.jpg);">
-								<a href="./pages/tours/spanish-salamanca.html">
+							<li class="glide__slide" style="background-image: url(./media/tours/spanish-salamanca.jpg);" data-index=11>
+								<!-- Alt text for screen readers since using div: -->
+								<div role="img" aria-label="View of an elegant building."></div>
+
+								
+								<a href="#">
+								
+
 									<div class="glide__slide__mouse-catcher">
 										<div class="glide__slide__content">
 											<h1>Learn Spanish in Salamanca</h1>
@@ -166,8 +249,14 @@
 								</a>
 							</li>
 						
-							<li class="glide__slide" style="background-image: url(./media/grand-europe-small.jpg);">
-								<a href="./pages/tours/mexican-vistas.html">
+							<li class="glide__slide" style="background-image: url(./media/tours/mexican-vistas.jpg);" data-index=12>
+								<!-- Alt text for screen readers since using div: -->
+								<div role="img" aria-label="View of an ocean through palm trees and a beach."></div>
+
+								
+								<a href="#">
+								
+
 									<div class="glide__slide__mouse-catcher">
 										<div class="glide__slide__content">
 											<h1>Mexican Vistas</h1>
@@ -177,8 +266,14 @@
 								</a>
 							</li>
 						
-							<li class="glide__slide" style="background-image: url(./media/grand-europe-small.jpg);">
-								<a href="./pages/tours/mexicos-mayan.html">
+							<li class="glide__slide" style="background-image: url(./media/tours/mexicos-mayan.jpg);" data-index=13>
+								<!-- Alt text for screen readers since using div: -->
+								<div role="img" aria-label="Mayan Pyramid Temple"></div>
+
+								
+								<a href="#">
+								
+
 									<div class="glide__slide__mouse-catcher">
 										<div class="glide__slide__content">
 											<h1>Mexico&#39;s Mayan Heritage</h1>
@@ -188,8 +283,14 @@
 								</a>
 							</li>
 						
-							<li class="glide__slide" style="background-image: url(./media/grand-europe-small.jpg);">
-								<a href="./pages/tours/mayan-caribbean.html">
+							<li class="glide__slide" style="background-image: url(./media/tours/mayan-caribbean.jpg);" data-index=14>
+								<!-- Alt text for screen readers since using div: -->
+								<div role="img" aria-label="Beach with palm trees"></div>
+
+								
+								<a href="#">
+								
+
 									<div class="glide__slide__mouse-catcher">
 										<div class="glide__slide__content">
 											<h1>Mayan Caribbean</h1>
@@ -199,8 +300,14 @@
 								</a>
 							</li>
 						
-							<li class="glide__slide" style="background-image: url(./media/grand-europe-small.jpg);">
-								<a href="./pages/tours/costa-rica-tropics.html">
+							<li class="glide__slide" style="background-image: url(./media/tours/costa-rica-tropics.jpg);" data-index=15>
+								<!-- Alt text for screen readers since using div: -->
+								<div role="img" aria-label="Man walking and holding a surf board in the sunset"></div>
+
+								
+								<a href="#">
+								
+
 									<div class="glide__slide__mouse-catcher">
 										<div class="glide__slide__content">
 											<h1> Cista Rica: Touch of Tropics</h1>
@@ -210,8 +317,14 @@
 								</a>
 							</li>
 						
-							<li class="glide__slide" style="background-image: url(./media/grand-europe-small.jpg);">
-								<a href="./pages/tours/peru-inca.html">
+							<li class="glide__slide" style="background-image: url(./media/tours/peru-inca.jpg);" data-index=16>
+								<!-- Alt text for screen readers since using div: -->
+								<div role="img" aria-label="View of the Peru mountains"></div>
+
+								
+								<a href="#">
+								
+
 									<div class="glide__slide__mouse-catcher">
 										<div class="glide__slide__content">
 											<h1>Peru: Land of the Inca</h1>
@@ -221,8 +334,14 @@
 								</a>
 							</li>
 						
-							<li class="glide__slide" style="background-image: url(./media/grand-europe-small.jpg);">
-								<a href="./pages/tours/australian-adventure.html">
+							<li class="glide__slide" style="background-image: url(./media/tours/australian-adventure.jpg);" data-index=17>
+								<!-- Alt text for screen readers since using div: -->
+								<div role="img" aria-label="Rooftop of the Australian Sydney Opera House"></div>
+
+								
+								<a href="#">
+								
+
 									<div class="glide__slide__mouse-catcher">
 										<div class="glide__slide__content">
 											<h1>Australian Adventure</h1>
@@ -232,8 +351,14 @@
 								</a>
 							</li>
 						
-							<li class="glide__slide" style="background-image: url(./media/grand-europe-small.jpg);">
-								<a href="./pages/tours/gateway-china.html">
+							<li class="glide__slide" style="background-image: url(./media/tours/gateway-china.jpg);" data-index=18>
+								<!-- Alt text for screen readers since using div: -->
+								<div role="img" aria-label="Chinese street and buildings with bright red lanterns hanging off of them"></div>
+
+								
+								<a href="#">
+								
+
 									<div class="glide__slide__mouse-catcher">
 										<div class="glide__slide__content">
 											<h1>Gateway to China</h1>
@@ -243,8 +368,14 @@
 								</a>
 							</li>
 						
-							<li class="glide__slide" style="background-image: url(./media/grand-europe-small.jpg);">
-								<a href="./pages/tours/japan-rising-sun.html">
+							<li class="glide__slide" style="background-image: url(./media/tours/japan-rising-sun.jpg);" data-index=19>
+								<!-- Alt text for screen readers since using div: -->
+								<div role="img" aria-label="Roof from a bright red japanese building"></div>
+
+								
+								<a href="#">
+								
+
 									<div class="glide__slide__mouse-catcher">
 										<div class="glide__slide__content">
 											<h1>Japan: Land of the Rising Sun</h1>
@@ -262,18 +393,18 @@
 
 			
 	<div class="page">	
-		<h1 class="text-centered big-text mb-2">The Ultimate Escape.</h1>
+		<h1 class="text-centered big-text mb-2 mt-1">The Ultimate Escape.</h1>
 		
 		<p class="block-centered mb-2">Over two million people have experienced other countries, learned other languages or participated in intercultural exchanges with Snaps! Our global network of suppliers, coupled with the largest volume of travelers in the industry, gives us the power to negotiate the best rates on flights, hotels, meals, and transportation—savings we pass along to you!</p>
 
-		<img class="block-left rounded clip-bottom" src="https://source.unsplash.com/800x400/?travel&aa"></img>
+		<img class="block-left rounded clip-bottom" src="./media/admiring.jpg" alt="Tourist admiring Venice arcitecture while standing on bridge">
 		
 		<div class="block-right home-card inverted clip-bottom">
 			<h1>Putting YOU First.</h1>
 			<p>Our quality control staff travels year-round—inspecting hotels, evaluating tour directors, visiting sights—to ensure our exacting quality standards. No one else offers these prices for this level of quality.</p>
 		</div>
 		
-		<img class="block-centered rounded clip-bottom" src="https://source.unsplash.com/800x400/?travel&ab"></img>
+		<img class="block-centered rounded clip-bottom" src="./media/mexico-beach.jpg" alt="View of a mexican beach from high in the sky.">
 
 		<div class="block-left home-card inverted">
 			<h1>Everything You Expect.</h1>
@@ -289,10 +420,16 @@
 
 		<div class="text-centered mb-3 mt-3">
 			<span class="h1 big-text">Prices starting at $1000</span>
-			<a href="#" class="button">See our Tours</a>
+			<a href="./pages/tours.html" class="button">See our Tours</a>
 		</div>
+
+		<img class="block-centered rounded mb-2" src="./media/venice.jpg" alt="View of Venice shoreline with people approaching the shore in boats with buildings in the back."></img>
 	</div>
 
+			<footer class="text-centered">
+				<p class="full-width">Copyright Michael Savchuk 2018</p>
+				<a class="button button--ghost mt-1" onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;">Back to top</a>
+			</footer>
 		</div>
 	</body>
 </html>

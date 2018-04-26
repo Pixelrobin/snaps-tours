@@ -1,9 +1,11 @@
 {% extends "./deps/_template.njk" %}
 
 {% set whiteNav = true %}
+{% set title = name + " Tour" %}
+{% set metaDescription = "Check out the " + name + " Tour, one of the many tours provided by Snaps! Tours. Offered at a low price of just $" + price %}
 
 {% block preheader %}
-<div class="fixed-bg" style="background-image: url({{ root }}/{{ image }}-big.jpg);"></div>
+<div class="fixed-bg" style="background-image: url({{ root }}/media/tours/{{ id }}.jpg);"></div>
 {% endblock %}
 
 {% block body %}
@@ -21,14 +23,14 @@
 			<div class="tour__info__cta">
 				<h2 class="h1">${{ price }}</h2>
 
-				<a href="#" class="button button--inverted m-0 mt-1">Book Now</a>
+				<a href="{{ root }}/pages/book.html" class="button button--inverted m-0 mt-1">Book Now</a>
 			</div>
 		</div>
 
 		<div class="tour-stops">
 			{% for stop in stops %}
 				<section class="tour-stops__stop">
-					<img src="https://source.unsplash.com/800x600/?europe&{{ loop.index }}"></img>
+					<img src="{{ root }}/media/tours/stops/{{ id }}/{{ loop.index0 }}.jpg" alt="{{ stop.alt }}"></img>
 					<div class="tour-stops__stop__details">
 						<h1 class="h2">{{ stop.name }}</h1>
 						<h2 class="h3">{{ stop.days }}</h2>

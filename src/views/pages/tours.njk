@@ -1,0 +1,35 @@
+{% extends "./deps/_template.njk" %}
+
+{% set title = "Tours" %}
+{% set metaDescription = "See the tours provided by Snaps! Tours. The best and cheapest tours for Students. Go to places like Europe, France, Paris, China, Japan, Mexico, The Caribbean, and more!" %}
+
+{% block body %}
+	<div class="page pl-2 pr-2">
+		<h1 class="text-centered mb-2 mt-2">Tours</h1>
+
+		<ul class="tours-list">
+		
+			{% for id, tour in tours %}
+			
+			{% if tour.stops %}
+			<a href="{{ root }}/pages/tours/{{ tour.id }}.html">
+			{% else %}
+			<a href="#">
+			{% endif %}
+
+				<li style="background-image: url({{ root }}/media/tours/{{ tour.id }}.jpg)">
+					<!-- Alt text for screen readers because using div: -->
+					<div role="img" aria-label="{{ tour.alt }}"></div>
+					
+					<div class="tours-list__darkener"></div>
+					<div class="tours-list__content">
+						<h1>{{ tour.name }}</h1>
+						<h2 class="mb-0">${{ tour.price }}</h2>
+					</div>
+				</li>
+			</a>
+			{% endfor %}
+		
+		</ul>
+	</div>
+{% endblock %}
