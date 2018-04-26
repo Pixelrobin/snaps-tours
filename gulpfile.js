@@ -11,9 +11,10 @@ const rename       = require('gulp-rename');
 const bs           = require('browser-sync');
 const data         = require('gulp-data');
 const newer        = require('gulp-newer');
+const jsonfile     = require('jsonfile');
 
 gulp.task('tours', done => {
-	const siteData = require('./src/data.json');
+	const siteData = jsonfile.readFileSync('./src/data.json');
 	const tours = siteData.tours;
 	const keys  = Object.keys(tours);
 	const pages = [];
@@ -41,7 +42,7 @@ gulp.task('tours', done => {
 });
 
 gulp.task('pages', gulp.parallel('tours', done => {
-	const siteData = require('./src/data.json');
+	const siteData = jsonfile.readFileSync('./src/data.json');
 
 	return gulp.src(["src/views/**/*.njk", "!src/views/**/_*.njk"])
 		.pipe(data(function(file) {

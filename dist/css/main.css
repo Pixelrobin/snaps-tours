@@ -684,14 +684,14 @@ li.glide__slide.glide__slide--active .glide__slide__mouse-catcher {
   padding: 2rem 1rem;
 }
 
-.tour-stops__stop .tour-stops__stop__details h2 {
+.tour-stops__stop .tour-stops__stop__details h1 {
   margin: 0;
   text-transform: initial;
 }
 
-.tour-stops__stop .tour-stops__stop__details h1 {
+.tour-stops__stop .tour-stops__stop__details h2 {
   color: #555;
-  margin-bottom: 0.75rem;
+  margin: 0.75rem 0;
   text-transform: initial;
 }
 

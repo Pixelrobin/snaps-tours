@@ -475,14 +475,14 @@ li.glide__slide {
 	& .tour-stops__stop__details {
 		padding: 2rem 1rem;
 
-		& h2 {
+		& h1 {
 			margin: 0;
 			text-transform: initial;
 		}
 
-		& h1 {
+		& h2 {
 			color: #555;
-			margin-bottom: 0.75rem;
+			margin: 0.75rem 0;
 			text-transform: initial;
 		}
 	}

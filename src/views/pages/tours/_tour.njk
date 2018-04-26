@@ -11,6 +11,7 @@
 		<div class="tour__info">
 			{% set words = name.split(' ') %}
 
+			<span class="pl-2 h2">Tour:</span>
 			<h1 class="pl-2">
 				{% for word in words %}
 					<span>{{ word }}</span>
@@ -18,36 +19,26 @@
 			</h1>
 
 			<div class="tour__info__cta">
-				<h2 class="h1">$1000</h2>
+				<h2 class="h1">${{ price }}</h2>
 
 				<a href="#" class="button button--inverted m-0 mt-1">Book Now</a>
 			</div>
 		</div>
 
 		<div class="tour-stops">
-			<section class="tour-stops__stop">
-				<img src="https://source.unsplash.com/800x600/?europe&a"></img>
-				<div class="tour-stops__stop__details">
-					<h1 class="h3">Day 1</h1>
-					<h2>Departure from the USA</h2>
-				</div>
-			</section>
-
-			<section class="tour-stops__stop">
-				<img src="https://source.unsplash.com/800x600/?europe&b"></img>
-				<div class="tour-stops__stop__details">
-					<h1 class="h3">Day 2</h1>
-					<h2>Lorem Ipsum</h2>
-				</div>
-			</section>
-
-			<section class="tour-stops__stop">
-				<img src="https://source.unsplash.com/800x600/?europe&c"></img>
-				<div class="tour-stops__stop__details">
-					<h1 class="h3">Day 1</h1>
-					<h2>Departure for the USA</h2>
-				</div>
-			</section>
+			{% for stop in stops %}
+				<section class="tour-stops__stop">
+					<img src="https://source.unsplash.com/800x600/?europe&{{ loop.index }}"></img>
+					<div class="tour-stops__stop__details">
+						<h1 class="h2">{{ stop.name }}</h1>
+						<h2 class="h3">{{ stop.days }}</h2>
+						
+						{% if stop.description %}
+						<p>{{ stop.description }}</p>
+						{% endif %}
+					</div>
+				</section>
+			{% endfor %}
 		</div>
 	</div>
 {% endblock %}
