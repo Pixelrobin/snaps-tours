@@ -15,38 +15,38 @@
 					"description": "Welcome to London where your Tour Director is waiting to take you to your hotel. On Day 3, guided sightseeing includes a visit to St. Paul’s Cathedral and the Changing of the Guard. Tonight, a West End theatre performance is included. On Day 4, enjoy a free day in London!",
 					"alt": "View of the Big Ben Clock Tower and surrounding buildings."
 				}, {
-					"name": "London-Paris",
+					"name": "London ▸ Paris",
 					"days": "Days 5 – 7",
 					"description": "Drive to board your ferry crossing the English Channel. Travel to Paris where you’ll join your Tour Director on an evening walking tour. On Day 6, guided sightseeing features visits to Gothic Notre Dame Cathedral and the Louvre Museum, yours to explore at your own pace using your “Tour Walking Guide.” Entrance fees are included. On Day 7, today’s highlight is a visit to Louis XIV’s elegant Versailles Palace.",
 					"alt": "View of the Eiffel Tower on a clear, sunny day"
 				}, {
-					"name": "Paris-Lausanna-France",
+					"name": "Paris ▸ Lausanna ▸ France",
 					"days": "Days 8 – 11",
 					"description": "Board the TGV to Lausanne. Stop in the Swiss capital of Bern in route to the Lucerne area. On Day 9, see the Kapellbruecke and the Lion Monument. On your free afternoon, opt for an exciting Alpine peak excursion. On Day 10, drive across the border to Italy en route to Renaissance Florence. On Day 11, guided sightseeing includes visits to the Duomo, The Church of Santa Croce, The Accademia to see Michelangelo’s David and a Florentine leather factory.",
 					"alt": "View of Lausanna from above in the orange sunset."
 				}, {
 					"days": "Days 12 – 13",
-					"name": "Florence-Assisi-Rome",
+					"name": "Florence ▸ Assisi ▸ Rome",
 					"description": "Travel to Assisi to visit St. Francis’ Basilica en route to Rome. On Day 13, guided sightseeing of the Eternal City includes visits to the Roman Forum, the Colosseum, St. Peter’s Basilica and the Sistine Chapel",
 					"alt": "View of the Roman Colosseum"
 				}, {
 					"days": "Days 14 – 15",
-					"name": "Rome-Pompeii-Sorrento",
+					"name": "Rome ▸ Pompeii ▸ Sorrento",
 					"description": "Visit Pompeii’s Ruins once buried by Mt. Vesuvius en route to clifftop Sorrento. On Day 15, ferry to magical Capri for free time to enjoy the island scenery before returning to Sorrento",
 					"alt": "View of Sorrento's cliffside buildings meeting the ocean."
 				}, {
 					"days": "Day 16",
-					"name": "Sorrento-Ferry to Greece",
+					"name": "Sorrento ▸ Ferry to Greece",
 					"description": "Drive to Bari to board your overnight ferry across the Ionian Sea to Greece",
 					"alt": "Sun setting over the Ionian Sea."
 				}, {
 					"days": "Days 17 – 18",
-					"name": "Patras-Delphi-Athens",
+					"name": "Patras ▸ Delphi ▸ Athens",
 					"description": "Arrive in Patras late in the afternoon. On Day 18, cross the Gulf of Corinth to the shrine of ancient Delphi to visit the Stadium, the Temple of Apollo, and the Amphitheatre. Proceed to Athens for your overnight stay",
 					"alt": "Windmill in the sunset."
 				}, {
 					"days": "Days 19 – 21",
-					"name": "Mykonos-Rhodes-Kusadasi-Patmos",
+					"name": "Mykonos ▸ Rhodes ▸ Kusadasi ▸ Patmos",
 					"description": "You’ll drive to Piraeus today to board your Greek Island Cruise. Your first stop on you cruise is the legendary island of Mykonos. On Day 20, dock at mystical Rhodes for a glorious free day. On Day 21, travel to the islands of Kusadasi and Patmos. Tonight, join your ship’s captain at a special farewell dinner",
 					"alt": "Mykonos buildings meet the ocean on a clear day."
 				}, {
